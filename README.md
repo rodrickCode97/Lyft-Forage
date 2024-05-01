@@ -51,18 +51,14 @@ Now we understand this background information, let’s get started with the task
 
 Class Car
  - last_service_date 
-- Name Str 
 - parts (set of car parts components)  
-- needs_service()
++ needs_service()
 
 Class Tire
--name
-+needs_service()
++ needs_service()
 
 Class Engine 
-- name
- - needs_service()
+ +  needs_service()
 
 Class Battery 
-- name
-- need_service()
++  need_service()
