@@ -1,4 +1,5 @@
 from abc import ABC
+from engine import Engine
 
 # from car import Car
 
@@ -12,8 +13,8 @@ from abc import ABC
 #     def engine_should_be_serviced(self):
 #         return self.current_mileage - self.last_service_mileage > 60000
 
-class WilloughbyEngine(ABC):
-    def __init__(self, last_service_date, current_mileage, last_service_mileage):
+class WilloughbyEngine(Engine):
+    def __init__(self, current_mileage, last_service_mileage):
         self.current_mileage = current_mileage
         self.last_service_mileage = last_service_mileage
 
