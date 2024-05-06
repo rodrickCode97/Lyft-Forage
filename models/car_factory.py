@@ -30,13 +30,13 @@ class CarFactory:
             return car
     @staticmethod
     def thovex(current_date, last_service_date, current_mileage, last_service_mileage):
-        engine = CapuletEngine(current_mileage, last_service_date)
+        engine = CapuletEngine(current_mileage, last_service_mileage)
         battery = NubbinBattery(current_date, last_service_date)
         car = Car(engine, battery)
         return car
     @staticmethod
-    def rorscharch(current_date, last_service_date, current_mileage, last_service_mileage):
-        engine = WilloughbyEngine(current_mileage, last_service_date)
+    def rorschach(current_date, last_service_date, current_mileage, last_service_mileage):
+        engine = WilloughbyEngine(current_mileage, last_service_mileage)
         battery = NubbinBattery(current_date, last_service_date)
         car = Car(engine, battery)
         return car
