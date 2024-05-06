@@ -1,7 +1,7 @@
 from datetime import datetime
 from abc import ABC
 from car import Car 
-from model import Model
+from models.model import Model
 
 from engine.capulet_engine import CapuletEngine
 from batteries.nubbin_battery import NubbinBattery
@@ -18,7 +18,7 @@ from batteries.nubbin_battery import NubbinBattery
 class Thovex(Model):
     def __init__(self, current_date, last_service_date, current_mileage, last_service_mileage):
         super().__init__(current_date, last_service_date, current_mileage, last_service_mileage)
-    def create(self, engine, battery):
+    def create(self):
         engine = CapuletEngine(self.current_mileage, self.last_service_date)
         battery = NubbinBattery(self.current_date, self.last_service_date)
         car = Car(engine, battery)

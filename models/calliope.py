@@ -1,4 +1,4 @@
-from model import Model
+from models.model import Model
 from datetime import datetime
 
 
@@ -19,7 +19,7 @@ class Calliope(Model):
     def __init__(self, current_date, last_service_date, current_mileage, last_service_mileage):
         super().__init__(current_date, last_service_date, current_mileage, last_service_mileage)
     
-    def create(self, engine, battery):
+    def create(self):
         engine = CapuletEngine(self.current_mileage, self.last_service_date)
         battery = SpindlerBattery(self.current_date, self.last_service_date)
         car = Car(engine, battery)
