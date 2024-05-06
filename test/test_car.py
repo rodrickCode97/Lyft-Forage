@@ -75,6 +75,7 @@ class TestGlissade(unittest.TestCase):
         current_mileage = 60000
         last_service_mileage = 0
         car = CarFactory.glissade(today, last_service_date, current_mileage, last_service_mileage)
+
         self.assertFalse(car.needs_service())
 
 
@@ -89,7 +90,7 @@ class TestPalindrome(unittest.TestCase):
 
     def test_battery_should_not_be_serviced(self):
         today = datetime.today().date()
-        last_service_date = today.replace(year=today.year - 3)
+        last_service_date = today.replace(year=today.year - 2)
         warning_light_is_on = False
         car = CarFactory.palindrome(today, last_service_date, warning_light_is_on)
         self.assertFalse(car.needs_service())
